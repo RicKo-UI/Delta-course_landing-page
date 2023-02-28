@@ -1,0 +1,294 @@
+/*css variabel */
+:root{
+    --normal-font: 400;
+    --medium-font: 500;
+    --bold-font: 700;
+    --primary-color: #4161FD;
+    --neutral-color: #232429;
+    --line-height: 1.7rem;
+    --transition: 0.4s ease-in;
+}
+
+
+body{
+    font-family: "Roboto", sans-serf;;
+}
+p{
+    color:#555761;
+}
+ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul li {
+    list-style-type: none;
+  }
+  
+a {
+    text-decoration: none;
+    color: #56585f;
+}
+  
+a:hover {
+    color: var(--primary-color);
+}
+
+.logo h1{
+    color: #4161FD;
+}
+
+.logo span{
+    color:#56585f;
+}
+
+nav {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    box-shadow: 2px 3px 2px #f1f1f1;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.nav-item {
+    margin-left: 2rem;
+}
+  
+.nav-link {
+    font-weight: var(--regular-font);
+}
+
+.hamburger {
+    display: none;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+}
+
+.hero{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.9rem;
+    max-width: 1100px;
+    margin: 2rem auto -6rem;
+}
+
+.hero-text h1{
+    font-size : 2.5rem;
+    font-weight: var(--bold-font);
+    color: var(--neutral-color);
+    margin-bottom: 1rem;
+}
+
+.hero-text p{
+    line-height: var(--line-height);
+}
+
+.btn{
+    margin-top: 1rem;
+    display: inline-block;
+    padding: 0.8rem 0.6rem;
+    border: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.btn-primary{
+    background-color: var(--primary-color);
+}
+
+.btn-primary:hover{
+    background-color: #2641c7;
+    color: #fff;
+}
+
+.about{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 14rem auto 2rem;
+}
+.about-text{
+    max-width: 600px;
+}
+
+.about-text h1{
+    font-size : 2.5rem;
+    font-weight: var(--bold-font);
+    color: var(--neutral-color);
+    margin-bottom: 2rem;
+}
+
+.about-text p{
+    line-height: var(--line-height);
+}
+
+.about-text a{
+    color: #4161FD;
+}
+
+.about-text a:hover{
+    color: #2641c7;
+}
+
+.testimony{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 7rem auto 2rem;
+}
+
+.testimony-text{
+    max-width: 550px;
+}
+.testimony h1{
+    font-size : 2.5rem;
+    font-weight: var(--bold-font);
+    color: var(--neutral-color);
+    margin-bottom: 2rem;
+}   
+
+.testimony h5{
+    font-size: 1.5rem;
+    font-weight: var(--medium-font);
+    color: var(--neutral-color);
+    margin: 2.7rem auto 1rem;
+}
+
+.sub{
+    margin: 7rem 6rem 2rem;
+    padding: 2rem;
+    text-align: center;
+    background-color: #EBEDF9;
+}
+
+.email-sub {
+    padding: 0.2rem;
+    border: 1px solid #56585f;
+    border-radius: 5px;
+    padding: 0.8rem 0.5rem;
+    margin-right: 1rem;
+}
+
+.email-sub:focus {
+    border: 1px solid var(--primary-color);
+    outline: none;
+}
+
+@media screen and (max-width: 600px){
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    ul{
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color: #fff;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+
+    ul.active {
+        left: 0;
+        margin-left: -8%;
+    }
+
+    .nav-item {
+        margin: 2rem 0;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .hero{
+        flex-direction: column;
+        max-width: 360px;
+        text-align: center;
+    }
+
+    .hero-text h1{
+        font-size: 2rem;
+    }
+
+    btn {
+        padding: 0.5rem;
+        font-size: 1.2rem;
+    }
+
+    .hero-image{
+        max-width: 100%;
+    }
+    
+    .about{
+        flex-direction: column;
+        max-width: 360px;
+        text-align: center;
+        margin: 12rem auto 2rem;
+    }
+
+    .about-text h1{
+        font-size: 1.8rem;
+    }
+
+    .about-image img{
+        display: none;
+    }
+
+    .testimony{
+        flex-direction: column;
+        max-width: 360px;
+        text-align: center;
+    }
+
+    .testimony-text h1{
+        font-size: 1.8rem;
+    }
+
+    .testimony-image img{
+        max-width: 300px;
+    }
+
+    .sub{
+        margin: 7rem 1rem 2rem;
+        padding: 1.2rem;
+        text-align: center;
+    }
+
+}
